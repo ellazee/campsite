@@ -5,6 +5,9 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
+// mongoose.connect('mongodb://localhost/hipposite');
+app.use(express.static(__dirname + '/public'));
+
 var secret = "myverysuperdupersecretthing";
 var User = require('./models/user');
 
