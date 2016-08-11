@@ -6,6 +6,8 @@ var jwt = require('jsonwebtoken');
 var morgan = require('morgan');
 var methodOverride = require('method-override');
 var app = express();
+
+var secret = "myverysuperdupersecretthing";
 var mongoose = require('mongoose');
 var User = require('./models/user');
 
@@ -16,9 +18,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(__dirname + '/public'));
 
-var secret = "myverysuperdupersecretthing";
 
+app.use('/api/users', expressJWT({secret: secret})
+.unless({path: ['/api/users'], method: 'post'}));
 
+app.use(function (err, req, res, next) {
+  if (err.name === 'UnauthorizedError') {
+    res.status(401).send({message: 'You need an authorization token to view this information.'})
+  }
+});
 app.use('/api/users', require('./controllers/users'));
 
 app.post('/api/auth', function(req, res) {

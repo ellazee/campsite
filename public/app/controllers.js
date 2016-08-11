@@ -1,4 +1,4 @@
-angular.module("HippoCtrls", [])
+angular.module("HippoCtrls", ['HippoServices'])
 
 // .controller('HomeCtrl', ['$scope', function($scope) {
 // 	$scope.toggle = false;

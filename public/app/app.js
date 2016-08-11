@@ -10,12 +10,12 @@ app.config([
 		$stateProvider
 		.state('home', {
 			url: '/',
-			templateUrl: 'app/views/home.html',
+			templateUrl: '/app/views/home.html',
 			controller: 'HomeCtrl'
 		})
 		.state('signup', {
 			url: '/signup',
-			templateUrl: 'app/views/signup.html',
+			templateUrl: '/app/views/signup.html',
 			controller: 'SignupCtrl'
 		})
 		.state('gallery', {
@@ -30,6 +30,6 @@ app.config([
     $locationProvider.html5Mode(true)
 	}]);
 
-// app.config(['$httpProvider', function($httpProvider) {
-//   $httpProvider.interceptors.push('AuthInterceptor');
-// }]);
+app.config(['$httpProvider', function($httpProvider) {
+  $httpProvider.interceptors.push('AuthInterceptor');
+}]);
