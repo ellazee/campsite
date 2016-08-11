@@ -29,6 +29,15 @@ angular.module("HippoCtrls", ['HippoServices'])
 		email: '',
 		password: ''
 	};
+	//signup w/o tokens
+	// $scope.userSignup = function() {
+	// 	$http.post('api/users', $scope.user).then(function success(res) {
+	// 		$location.path('/');
+	// 	}, function error(res) {
+	// 		console.log(res);
+	// 	});
+	// } 
+	//tryign to get signup to post to db with tokens
 	$scope.userSignup = function() {
 		$http.post('/api/users', $scope.user).then(function success(res) {
 			$location.path('/');
