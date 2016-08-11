@@ -13,10 +13,20 @@ app.config([
 			templateUrl: 'app/views/home.html',
 			controller: 'HomeCtrl'
 		})
+		.state('signup', {
+			url: '/signup',
+			templateUrl: 'app/views/signup.html',
+			controller: 'SignupCtrl'
+		})
+		.state('gallery', {
+			url: '/photos',
+			templateUrl: 'app/views/gallery.html'
+		})
 		.state('404', {
       url: '/404',
       templateUrl: 'app/views/404.html'
     });
+    
     $locationProvider.html5Mode(true)
 	}]);
 
