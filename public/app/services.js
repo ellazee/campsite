@@ -21,6 +21,10 @@ angular.module('HippoServices', ['ngResource'])
     }
   }
 }])
+.factory('User', function() {
+  return {};
+})
+
 
 .factory('AuthInterceptor', ['Auth', function(Auth) {
   return {
