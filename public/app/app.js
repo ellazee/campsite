@@ -1,4 +1,4 @@
-var app = angular.module('HippoApp', ['ui.router', 'HippoCtrls']);
+var app = angular.module('HippoApp', ['ui.router', 'HippoCtrls', 'navbar']);
 
 app.config([
 	'$stateProvider',
@@ -21,6 +21,10 @@ app.config([
 		.state('gallery', {
 			url: '/photos',
 			templateUrl: 'app/views/gallery.html'
+		})
+		.state('profile', {
+			url: '/profile',
+			templateUrl: 'app/views/profile.html'
 		})
 		.state('404', {
       url: '/404',
