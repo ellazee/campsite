@@ -26,6 +26,18 @@ app.config([
 			url: '/profile',
 			templateUrl: 'app/views/profile.html'
 		})
+		.state('about', {
+			url: '/about',
+			templateUrl: 'app/views/about.html'
+		})
+		.state('2016', {
+			url: '/hippocamp2016',
+			templateUrl: 'app/views/2016.html'
+		})
+		.state('dinners', {
+			url: '/dinners',
+			templateUrl: 'app/views/dinners.html'
+		})
 		.state('404', {
       url: '/404',
       templateUrl: 'app/views/404.html'

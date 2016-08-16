@@ -21,10 +21,11 @@ angular.module("HippoCtrls", ['HippoServices'])
    $http.post('/api/auth', $scope.user).then(function success(res) {
     Auth.saveToken(res.data.token);
     	User = res.data.user;
-    	$scope.username = User.username;
+    	// $scope.username = User.username;
 			console.log(User.username);
-			// localStorage.setItem('username', User.username);
-			// localStorage.setItem('useremail', User.email);
+			localStorage.setItem('username', User.username);
+			localStorage.setItem('useremail', User.email);
+			$scope.username = localStorage.getItem('username');
     // console.log($scope.user);
     $location.path('/')
    }, function error(res) {

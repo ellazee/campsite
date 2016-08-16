@@ -1,4 +1,4 @@
-    <nav class="navbar navbar-default" ng-controller="NavCtrl">
+    <nav class="navbar navbar-dark" ng-controller="NavCtrl">
       <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -20,7 +20,7 @@
 
             <!-- <li ng-show="Auth.isLoggedIn()">{{ user.username }}</li> -->
             
-            <li><a ui-sref="profile" ng-show="Auth.isLoggedIn()">Hello {{ username }}</a></li>
+            <li><a ui-sref="profile" ng-show="Auth.isLoggedIn()">Hello there! {{ username }}</a></li>
             <li><a ui-sref="home" ng-click="logout()" ng-show="Auth.isLoggedIn()">Logout</a></li>
           </ul>
 <!-- loginform goes here -->

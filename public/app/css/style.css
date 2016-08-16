@@ -1,11 +1,26 @@
 body {
 	color: salmon;
+	background-image: url("/app/css/images/greeting2011.jpg");
+	background-size: cover;
 }
 
 .navlogin {
 	height: 1.75em;
 	width: 100px;
 }
-.inline {
-	
+.bg {
+	width: 100%;
+	z-index: 0;
+}
+
+.navbar {
+	background-color: transparent;
+
+}
+.navbar a {
+    color: white;
+}
+
+a {
+	color: white;
 }
